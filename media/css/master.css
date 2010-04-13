@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background: #FFF -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0.2)), to(rgba(0,0,0,0.6)));
+    margin-bottom: 0;
+}
+body, select, input {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#iphone {
+    width: 386px;
+    height: 480px;
+    margin: 16px;
+    position: relative;
+    float: left;
+}
+.device #iphone {
+    background: url('../img/iphone.png') 0 0 no-repeat;
+    height: 728px;
+}
+#screen {
+    width: 320px;
+    height: 480px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    outline: 5px solid #000;
+}
+.device #screen {
+    left: 35px;
+    top: 132px;
+    outline: 0;
+}
+#statusbar {
+    width: 320px;
+    height: 19px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F0F5F8), to(#BEC5C9));
+    border-bottom: 1px solid #5D6368;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    position: relative;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(0,0,0,0.8);
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+    }
+                
+    #carrier {
+        position: absolute;
+        display: block;
+        top: 0px;
+        left: 4px;
+        height: 100%;
+        background: url('../img/service.png') 0 4px no-repeat;
+        padding-top: 1px;
+        padding-left: 22px;
+        color: rgba(0,0,0,0.6);
+    }
+    .black #carrier {
+        color: #BFBFBF;
+        background-image: url('../img/service-black.png');
+        background-position: 0 3px;
+    }
+    #time {
+        position: absolute;
+        display: block;
+        top: 1px;
+        left: 50%;
+        width: 70px;
+        margin-left: -35px;
+        text-align: center;
+    }
+    #battery {
+        position: absolute;
+        display: block;
+        top: 4px;
+        right: 3px;
+        width: 21px;
+        height: 11px;
+        background: url('../img/battery.png') 0 0 no-repeat;
+    }
+    .black #battery {
+        background-image: url('../img/battery-black.png');
+    }
+#statusbar.black {
+    background: #000;
+    color: #BFBFBF;
+    text-shadow: none;
+    border-bottom-color: #000;
+    border-radius: 0;
+}
+#locationbar {
+    display: none;
+}
+.locationbar #locationbar {
+    display: block;
+    width: 320px;
+    height: 60px;
+    background: url('../img/locationbar.png') 0 0 no-repeat;
+    position: relative;
+}
+#location {
+    position: absolute;
+    top: 25px;
+    left: 14px;
+    width: 166px;
+    height: 24px;
+    border: 0;
+    font-size: 14px;
+    color: #666;
+}
+#location:focus {
+    border: 0;
+    outline: 0;
+}
+.toolbar #toolbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 44px;
+    background: url('../img/toolbar.png') 0 0 no-repeat;
+}
+#canvas {
+    border: 0;
+    background: white;
+    width: 335px;
+    height: 460px;
+    margin: 0;
+}
+.locationbar #canvas {
+    height: 400px;
+}
+.locationbar.toolbar #canvas {
+    height: 356px;
+}
+.toolbar #canvas {
+    height: 416px;
+}
+
+#controlpanel {
+    float: left;
+    margin: 140px 32px 32px 32px;
+}
+h1 {
+    font-size: 48pt;
+    letter-spacing: -6px;
+    color: #222;
+    text-shadow: 0px 1px 0px #FFF;
+}
+div.row {
+    margin: 8px 0;
+}
+label {
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
+}
+select, input {
+    font-size: 100%;
+}
+input[type="text"] {
+    font-size: 100%;
+    border: 1px solid rgba(0,0,0,0.6);
+}
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+#row-statusbar label, #row-carrier label {
+    margin-right: 6px;
+}

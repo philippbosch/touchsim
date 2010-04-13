@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>touchsim</title>
+    <link rel="stylesheet" type="text/css" href="media/css/master.css">
+    <script src="media/js/jquery.min.js"></script>
+    <script src="media/js/master.js"></script>
+</head>
+
+<body class="locationbar toolbar device">
+    <div id="iphone">
+        <div id="screen">
+            <div id="statusbar">
+                <span id="carrier">touchsim</span>
+                <span id="time">9:42 AM</span>
+                <span id="battery"></span>
+            </div>
+            <div id="locationbar"><input type="text" id="location" autocorrect="no"></div>
+            <iframe id="canvas" src="http://fhp.pb.io/app/" scrolling="yes"></iframe>
+            <div id="toolbar"></div>
+        </div>
+    </div>
+    
+    <div id="controlpanel">
+        <h1>touchsim</h1>
+        <form>
+            <div class="row" id="row-statusbar"><label for="type-statusbar">Status Bar Style</label><select name="statusbar" id="type-statusbar"><option value="gray" selected>gray</option><option value="black">black</option></select></div>
+            <div class="row" id="row-locationbar"><input type="checkbox" name="locationbar" id="toggle-locationbar" checked><label for="toggle-locationbar">Location Bar</label></div>
+            <div class="row" id="row-toolbar"><input type="checkbox" name="toolbar" id="toggle-toolbar" checked><label for="toggle-toolbar">Tool Bar</label></div>
+            <div class="row" id="row-device"><input type="checkbox" name="device" id="toggle-device" checked><label for="toggle-device">Device</label></div>
+            <div class="row" id="row-carrier"><label for="carrier-text">Carrier</label><input type="text" name="carrier" id="carrier-text" value="touchsim"></div>
+        </form>
+    </div>
+</body>
+
+</html>
