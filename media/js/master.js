@@ -8,6 +8,9 @@ $(document).ready(function() {
     $('#toggle-toolbar').bind('change', function() {
         $('body').toggleClass('toolbar', $(this).attr('checked'));
     });
+    $('#toggle-scrollbar').bind('change', function() {
+        $('body').toggleClass('scrollbar', $(this).attr('checked'));
+    });
     $('#toggle-device').bind('change', function() {
         $('body').toggleClass('device', $(this).attr('checked'));
     });
@@ -18,7 +21,11 @@ $(document).ready(function() {
         if ((event.keyCode == 13) || (event.type == 'reload')) {
             var url = $(this).val();
             if (url.substr(0,7) != 'http://' && url.substr(0,7) != 'file://') url = 'http://' + url;
-            $('#canvas').attr('src', url);
+            try {
+                $('#canvas').attr('src', url);
+            } catch(e) {
+                alert('Unable to load local resource. ' + e);
+            }
             $(this).blur();
         }
     });
@@ -51,6 +58,8 @@ $(document).ready(function() {
     $('body').addClass('platform-' + window.navigator.platform.substr(0,3).toLowerCase());
     
     window.setInterval(function() {
-        $('body').toggleClass('scrollbar', $('#canvas').attr('contentDocument').height > $('#canvas').height());
+        var showScrollbar = $('#canvas').attr('contentDocument').height > $('#canvas').height();
+        $('body').toggleClass('scrollbar', showScrollbar);
+        $('#toggle-scrollbar').attr('checked', showScrollbar);
     }, 1000);
 });
