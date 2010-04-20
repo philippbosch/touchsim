@@ -17,7 +17,6 @@ $(document).ready(function() {
     $('#location').bind('keyup reload', function(event) {
         if ((event.keyCode == 13) || (event.type == 'reload')) {
             var url = $(this).val();
-            console.log(url.substr(0,7));
             if (url.substr(0,7) != 'http://' && url.substr(0,7) != 'file://') url = 'http://' + url;
             $('#canvas').attr('src', url);
             $(this).blur();
@@ -50,4 +49,8 @@ $(document).ready(function() {
     });
     
     $('body').addClass('platform-' + window.navigator.platform.substr(0,3).toLowerCase());
+    
+    window.setInterval(function() {
+        $('body').toggleClass('scrollbar', $('#canvas').attr('contentDocument').height > $('#canvas').height());
+    }, 1000);
 });
