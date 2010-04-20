@@ -29,14 +29,15 @@ body, select, input {
     height: 480px;
     position: absolute;
     overflow: hidden;
-    left: 0;
-    top: 0;
-    outline: 5px solid #000;
+    left: -3px;
+    top: -3px;
+    padding: 3px;
+    background: #263037;
+    border-radius: 3px;
 }
 .device #screen {
-    left: 35px;
-    top: 132px;
-    outline: 0;
+    left: 32px;
+    top: 129px;
 }
 #statusbar {
     width: 320px;
@@ -122,8 +123,8 @@ body, select, input {
 }
 .toolbar #toolbar {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 3px;
+    left: 3px;
     width: 320px;
     height: 44px;
     background: url('../img/toolbar.png') 0 0 no-repeat;
