@@ -131,10 +131,16 @@ body, select, input {
 #canvas {
     border: 0;
     background: white;
-    width: 335px;
     height: 460px;
     margin: 0;
 }
+.platform-mac #canvas {
+    width: 335px;
+}
+.platform-win #canvas {
+    width: 337px;
+}
+
 .locationbar #canvas {
     height: 400px;
 }

@@ -48,4 +48,6 @@ $(document).ready(function() {
     $('#controlpanel form').bind('submit', function(e) {
         e.preventDefault();
     });
+    
+    $('body').addClass('platform-' + window.navigator.platform.substr(0,3).toLowerCase());
 });
