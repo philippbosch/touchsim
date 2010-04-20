@@ -37,9 +37,9 @@ $(document).ready(function() {
     }).each(function() {
         var value = localStorage.getItem($(this).attr('id'));
         if ($(this).is('[type="checkbox"]')) {
-            $(this).attr('checked', value == 'true');
+            if (value !== null) $(this).attr('checked', value == 'true');
         } else {
-            $(this).val(value);
+            if (value !== null) $(this).val(value);
         }
         $(this).triggerHandler('change');
         $(this).triggerHandler('reload');
